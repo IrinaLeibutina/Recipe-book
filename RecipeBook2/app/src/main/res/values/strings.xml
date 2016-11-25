@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ням Нямыч</string>
+
+    <string name="action_settings">action_settings</string>
+    <string name="action_item1">action_item1</string>
+    <string name="action_item2">action_item2</string>
+    <string name="action_item3">action_item3</string>
+    <string name="title_activity_favorite_recipe">Любимые рецепты</string>
+    <string name="title_activity_find_recipe">Поиск</string>
+    <string name="title_activity_fridge">Холодильник</string>
+
+    <string name="title_activity_shopping_list">Список покупок</string>
+
+</resources>

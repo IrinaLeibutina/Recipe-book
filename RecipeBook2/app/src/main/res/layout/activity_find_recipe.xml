@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.irina.recipebook.FindRecipeActivity"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:text="По ингредиентам"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton"
+            app:layout_anchor="@+id/include2"
+            android:layout_marginTop="70dp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            app:buttonTint="@android:color/holo_green_light"/>
+
+
+        <RadioButton
+            android:text="По названию"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_weight="1"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            app:buttonTint="@android:color/holo_green_light"/>
+
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/dataForSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="120dp"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorPrimary">
+    </EditText>
+
+    <Button
+        android:text="Поиск"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_gravity="center"
+        android:layout_marginTop="-150dp"
+        android:onClick="Find"
+        android:alpha="0.7"
+        android:background="@android:color/holo_green_light"
+        />
+
+
+    <include layout="@layout/content_find_recipe"
+        android:id="@+id/include2" />
+
+</android.support.design.widget.CoordinatorLayout>
