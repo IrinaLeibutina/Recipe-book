@@ -45,7 +45,7 @@ public class ShoppingListActivity extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         mTaskListView = (ListView) findViewById(R.id.shopping_list);
         mHelper = new ShoppingListDbHelper(this);
-        //  updateUI();
+        updateUI();
     }
 
     @Override

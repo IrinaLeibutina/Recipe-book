@@ -19,6 +19,7 @@ public class FindRecipeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         dataForSearch = (EditText) findViewById(R.id.dataForSearch);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 

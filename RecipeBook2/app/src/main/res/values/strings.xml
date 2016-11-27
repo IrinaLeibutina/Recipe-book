@@ -10,5 +10,6 @@
     <string name="title_activity_fridge">Холодильник</string>
 
     <string name="title_activity_shopping_list">Список покупок</string>
+    <string name="title_activity_show_recipe">ShowRecipeActivity</string>
 
 </resources>

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.irina.recipebook.db.DataBaseHandler;
@@ -35,6 +37,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         db.deleteAll();
+
+      /*  Button q = (Button) findViewById(R.id.soup) ;
+        Button q1 = (Button) findViewById(R.id.second) ;
+        Button q2 = (Button) findViewById(R.id.salats) ;
+
+        View.OnClickListener onClickListener= new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                switch (view.getId()){
+                    case R.id.soup :{
+                        changeActivity("Супы");
+                        Toast.makeText(MainActivity.this, getString(R.string.action_item3), Toast.LENGTH_LONG).show();
+                    }
+                    break;
+                    case R.id.second:{
+                        changeActivity("Вторые блюда");
+                    }
+                    break;
+
+                    case R.id.salats:{
+                        changeActivity("Салаты");
+                    }
+                    break;
+                }
+            }
+        };*/
     }
 
 
@@ -80,5 +108,55 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.soup :{
+                changeActivity("Супы");
+            }
+            break;
+            case R.id.second:{
+                changeActivity("Вторые блюда");
+            }
+            break;
+            case R.id.salats:{
+                changeActivity("Салаты");
+            }
+            break;
+            case R.id.fish:{
+                changeActivity("Рыбные блюда");
+            }
+            break;
+            case R.id.vegitables: {
+                changeActivity("Блюда из овощей");
+            }
+            break;
+            case R.id.salting: {
+                changeActivity("Соленья, маринады");
+            }
+            break;
+            case R.id.desert: {
+                changeActivity("Десерты");
+            }
+            break;
+            case R.id.little_cakes: {
+                changeActivity("Запеканки");
+            }
+            break;
+            case R.id.cakes: {
+                changeActivity("Изделия из теста");
+            }
+            break;
+        }
+    }
+
+    public void changeActivity(String type){
+        Intent intent = new Intent(MainActivity.this, ShowRecipeActivity.class);
+        intent.putExtra("type", type);
+        //intent.putExtra("lastname", lastName.getText().toString());
+        startActivity(intent);
+      //  ShowRecipeActivity s = new ShowRecipeActivity();
+     //   s.setTitle("sjdhsksfsfks");
     }
 }
