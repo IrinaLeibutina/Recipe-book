@@ -38,7 +38,7 @@
             android:layout_marginTop="70dp"
             android:layout_weight="1"
             android:textSize="18dp"
-            app:buttonTint="@android:color/holo_green_light"/>
+            android:buttonTint="@android:color/holo_green_light"/>
 
 
         <RadioButton
@@ -50,7 +50,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginLeft="10dp"
             android:textSize="18dp"
-            app:buttonTint="@android:color/holo_green_light"/>
+            android:buttonTint="@android:color/holo_green_light"/>
 
 
     </RadioGroup>
@@ -80,5 +80,7 @@
 
     <include layout="@layout/content_find_recipe"
         android:id="@+id/include2" />
+
+
 
 </android.support.design.widget.CoordinatorLayout>

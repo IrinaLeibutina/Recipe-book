@@ -5,17 +5,39 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.irina.recipebook.db.DataBaseHandler;
+import com.example.irina.recipebook.logics.Recipe;
+
+import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        DataBaseHandler db = new DataBaseHandler(this);
+
+        System.out.println("Inserting ..");
+        db.addContact(new Recipe("a1", "a)","a", "a", "a"));
+        db.addContact(new Recipe("3", "434", "s", "asd", "sdsdkadasdas"));
+
+        Recipe d =  db.getRecipe("a)");
+        Toast.makeText(MainActivity.this, d.getName() + d.getType(), Toast.LENGTH_LONG).show();
+
+        System.out.println("Reading all contacts..");
+        List<Recipe> recipes = db.getAllRecipes();
+        for (Recipe cn : recipes) {
+            Toast.makeText(MainActivity.this, cn.getName() + cn.getType() + cn.getIngredients() + cn.getCooking(), Toast.LENGTH_LONG).show();;
+        }
+
+        db.deleteAll();
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
